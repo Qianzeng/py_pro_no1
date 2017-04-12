@@ -1,7 +1,5 @@
 class Rule:
-    """
-    Base class for all rules.
-    """
+
     def action(self, block, handler):
         handler.start(self.type)
         handler.feed(block)
@@ -14,10 +12,7 @@ class HeadingRule(Rule):
         return not '\n' in block and len(block) <= 70 and not block[-1] == ':'
 
 class TitleRule(HeadingRule):
-    """
-    The title is the first block in the document, provided that it is
-    a heading.
-    """
+
     type = 'title'
     first = True
 
