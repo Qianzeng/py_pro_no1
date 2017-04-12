@@ -56,3 +56,5 @@ class HTMLRenderer(Handler):
     def feed(self,data):
         print data
 
+    def myfun(self):
+        pass
