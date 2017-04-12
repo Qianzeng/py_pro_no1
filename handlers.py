@@ -58,3 +58,5 @@ class HTMLRenderer(Handler):
 
     def myfun(self):
         pass
+    def aaa(self):
+        pass
