@@ -1,5 +1,5 @@
 # -*- coding: cp936 -*-
-#del description
+
 class Handler:
     def callback(self, prefix, name, *args):
         method = getattr(self, prefix+name, None)
