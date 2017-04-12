@@ -1,14 +1,8 @@
 # -*- coding: cp936 -*-
+#del description
 class Handler:
-    """
-    An object that handles method calls from the Parser.
-
-    The Parser will call the start() and end() methods at the
-    beginning of each block, with the proper block name as a
-    parameter. The sub() method will be used in regular expression
-    substitution. When called with a name such as 'emphasis', it will
-    return a proper substitution function.
-    """
+    def p:
+        pass
     def callback(self, prefix, name, *args):
         method = getattr(self, prefix+name, None)
         if callable(method): return method(*args)
@@ -24,13 +18,7 @@ class Handler:
         return substitution
 
 class HTMLRenderer(Handler):
-    """
-    A specific handler used for rendering HTML.
 
-    The methods in HTMLRenderer are accessed from the superclass
-    Handler's start(), end(), and sub() methods. They implement basic
-    markup as used in HTML documents.
-    """
     def start_document(self):
         print '<html><head><title>...</title></head><body>'
     def end_document(self):
@@ -70,11 +58,3 @@ class HTMLRenderer(Handler):
     def feed(self,data):
         print data
 
-
-
-
-
-
-
-
-        
