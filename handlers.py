@@ -1,7 +1,5 @@
 # -*- coding: cp936 -*-
 class Handler:
-    def p:
-        pass
     def callback(self, prefix, name, *args):
         method = getattr(self, prefix+name, None)
         if callable(method): return method(*args)
